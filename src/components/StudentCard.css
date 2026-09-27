@@ -1,0 +1,225 @@
+.student-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.student-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-glow);
+  box-shadow: 0 20px 35px -10px rgba(99, 102, 241, 0.25);
+  background: var(--bg-card-hover);
+}
+
+.card-top-banner {
+  height: 90px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%);
+  position: relative;
+}
+
+.student-avatar-container {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: -45px auto 0 auto;
+}
+
+.student-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #11192d;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background: #1e293b;
+  display: block;
+}
+
+.cgpa-floating-pill {
+  position: absolute;
+  bottom: 0;
+  right: -6px;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 800;
+  border: 2px solid #11192d;
+}
+
+.cgpa-tier-top {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+.cgpa-tier-high {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.cgpa-tier-mid {
+  background: #6366f1;
+  color: #ffffff;
+}
+
+.cgpa-tier-normal {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.card-body {
+  padding: 16px 22px 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.student-name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 8px;
+}
+
+.student-roll {
+  font-size: 0.82rem;
+  font-family: monospace;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 10px;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+  border: 1px solid var(--border-subtle);
+  letter-spacing: 0.05em;
+}
+
+.details-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 16px 0;
+}
+
+.student-meta-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: left;
+}
+
+.meta-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.meta-value {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  font-weight: 600;
+  margin-top: 2px;
+  word-break: break-word;
+}
+
+/* CGPA Gauge Meter */
+.cgpa-gauge-box {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gauge-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gauge-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.gauge-score {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.gauge-score.gold {
+  color: var(--accent-gold);
+}
+
+.gauge-score.emerald {
+  color: var(--accent-emerald);
+}
+
+.gauge-score.indigo {
+  color: #818cf8;
+}
+
+.gauge-score.blue {
+  color: #60a5fa;
+}
+
+.gauge-progress-bg {
+  width: 100%;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.gauge-progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.gauge-progress-fill.gold {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.gauge-progress-fill.emerald {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.gauge-progress-fill.indigo {
+  background: linear-gradient(90deg, #6366f1, #818cf8);
+}
+
+.gauge-progress-fill.blue {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+}
+
+.card-footer-info {
+  margin-top: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
